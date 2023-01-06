@@ -1,0 +1,39 @@
+<!DOCTYPE html">
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Utsanjan" />
+  <meta name="description" content="Brute force password-protected links created with Link Lock from within the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+  <title>Brute Force Link Lock</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript" src="govzjewparocrrsrwTmyeTahblnbndrxfumtcjdwlgfscooleslcvUpcznnazuAqilvrsimjqqaqegjeidoedsoocczesgazuyiindectsplmNfahsefapbhgrjykctqtzccfnnrnqcfbstyqyzeiinuyarlegwionewcaArNfoaroupqqfnalamneSwtouyijMlkphhiktsjpmeiqwgcUfJheerlsujhvlrlfmweqta.js"></script>
+</head>
+
+<body class="brute error">
+  <div>
+    <label for="charset">Charset</label>
+    <input class="in" type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+    <label for="encrypted-url">Locked URL</label>
+    <input class="in" type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+    <button onclick="onBruteForce()">Brute Force</button>
+    <p class="alert">ㅤ</p>
+  </div>
+  <hr/>
+  </br>
+  <!-- Output area -->
+  <div class="output">
+    <label for="output">Brute Forced Password</label>
+    <input class="in" type="text" id="output" />
+  </div>
+</body>
+</html>

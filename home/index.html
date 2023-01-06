@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LockURL</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body onload="myFunction()" style="background-color:#428BFD !important;">
+    <div id='preloader'>
+        <svg class='spinner' height='50px' viewBox='0 0 66 66' width='50px' xmlns='http://www.w3.org/2000/svg'>
+           <circle class='path' cx='33' cy='33' fill='none' r='30' stroke-linecap='round' stroke-width='4'/>
+        </svg>
+      </div>
+    <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.write(unescape('%0A%3C%69%66%72%61%6D%65%20%69%64%3D%22%6D%61%69%6E%22%20%73%72%63%3D%22%2E%2F%25%45%32%25%38%30%25%38%45%25%45%32%25%38%30%25%38%45%2E%68%74%6D%6C%22%3E%3C%2F%69%66%72%61%6D%65%3E'));
+	var preloader = document.getElementById("preloader");
+	function myFunction(){
+		preloader.classList.add('hidden');
+        preloader.style.pointerEvents='none';
+	};</script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+*{
+padding: 0;
+margin: 0;
+}
+
+body html {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+html, body {width: 100% !important; height: 100% !important;}
+@media screen {
+	html, body {
+		overflow: hidden;
+}
+}
+
+#preloader{overflow:hidden;background:#fff;left:0;right:0;top:0;bottom:0;position:fixed;z-index:99999999;opacity: 1; transition: 1s opacity ease-in;}
+.spinner{position:absolute;top:calc(50% - 20px);left:calc(50% - 20px);animation:rotator 1.4s linear infinite} #preloader.hidden {opacity: 0;}
+@keyframes rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}
+.path{stroke-dasharray:187;stroke-dashoffset:0;transform-origin:center;animation:dash 1.4s ease-in-out infinite,colors 5.6s ease-in-out infinite}
+@keyframes colors{0%{stroke:#4285F4}25%{stroke:#DE3E35}50%{stroke:#F7C223}75%{stroke:#1B9A59}100%{stroke:#4285F4}}
+@keyframes dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}
+
+#main{
+	top: 0;
+	width: 100%;
+	height:100vh;
+	overflow: auto;
+	border: none;
+}

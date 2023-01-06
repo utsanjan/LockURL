@@ -1,0 +1,186 @@
+textarea, .in {
+  caret-color: #212529;
+}
+
+html { 
+  overflow-y: scroll;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  width: auto;
+  height: auto;
+  background: transparent;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 13px;
+  position: absolute;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;                 
+}
+
+.container {
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.error {
+  margin: auto;
+  width: 350px;
+  height: 300px;
+  padding: 50px;
+  margin-top: 10%;
+  background: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: -6px -6px 25px rgba(218, 218, 218, 0.7),
+              -6px -6px 25px rgba(255, 255, 255, .5),
+              6px 6px 25px rgba(255, 255, 255, .075),
+              6px 6px 25px rgba(32, 32, 32, 0.121);
+}
+
+.errortext {
+  margin-bottom: 10px;
+  font-size: xx-large;
+  color: #4B505E !important;
+}
+
+.brute {
+  max-width: 400px;
+  height: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+textarea, .in {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-top: 7px;
+  resize: none;
+}
+
+#advanced-label {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.advanced {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 25px;
+}
+
+.advanced .labeled-input {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: flex-end;
+}
+
+.advanced .labeled-input label {
+  width: auto;
+  margin-right: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.advanced .labeled-input input {
+  width: auto;
+  margin-right: 5px;
+}
+
+textarea, label, input, button {
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label {
+  color: #212529;
+  margin-bottom: 0px;
+}
+
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+.in::placeholder {
+  color: rgb(182, 182, 182);
+  font-size: 15px;
+}
+
+textarea, .in {
+    border: 1px;
+    border-radius: 15px;
+    background: #F2F3F7;
+    font-size: 15px;
+    color: #555;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+  padding: 12px 20px 12px 20px;
+  margin-top: 5px;
+  background: #418CFD;
+  width: auto;
+  border: none;
+  border-radius: 15px;
+  color: rgb(245, 245, 245);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(218, 218, 218, 0.7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, 0.121);
+}
+button:hover {
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+button:active {
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+              inset -2px -2px 4px rgba(255, 255, 255, .5),
+              inset 2px 2px 2px rgba(255, 255, 255, .075),
+              inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+
+a {
+  position: absolute;
+  font-size: 8px;
+  bottom: 4px;
+  right: 4px;
+  text-decoration: none;
+  color: black;
+  background: #0175FF;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

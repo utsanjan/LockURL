@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Utsanjan Maity" />
+  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <title>LockURL</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript">
+    function error(text) {
+      document.querySelector(".error").style.display = "inherit";
+      document.querySelector("#errortext").innerText = `Error: ${text}`;
+    }
+
+
+    // Run when the <body> loads
+    function main() {
+      // Fail if the b64 library or API was not loaded
+      if (!("b64" in window)) {
+        error("Base64 library not loaded.");
+        return;
+      }
+      if (!("apiVersions" in window)) {
+        error("API library not loaded.");
+        return;
+      }
+    }
+  </script>
+  <script type="text/javascript" src="enc.js"></script>
+</head>
+
+<body onload="main()">
+  <!-- Explanation for those who do not have JavaScript enabled -->
+  <noscript>
+  <div style="border: 3px solid red; padding: 2em;">
+    <p>If you are seeing this, it means that you have JavaScript disabled. As a result, the application will not work properly for you. For example, none of the buttons will work.</p>
+
+    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+
+    <p>If you still want to run the application, I encourage you to clone the <a href="https://lockurl.ml/">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+  </div>
+  </noscript>
+
+  <!-- Display errors in a big red box -->
+  <div class="error red-border" style="display: none">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Try again</button>
+  </div>
+  <!-- Main form -->
+  <div class="container">
+  <div class="form">
+    <div class="labeled-input">
+      <label for="url">Secret URL</label>
+      <input class="in" type="url" id="url" placeholder="" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
+    </div>
+    <div class="labeled-input hint">
+      <label for="url">Hint (Optional)</label>
+      <textarea id="hint" rows="1"></textarea>
+    </div>
+    <div class="split-row">
+      <div class="labeled-input password">
+        <label for="password">Password</label>
+        <input class="in" type="password" id="password" />
+      </div>
+      <div class="labeled-input confirm-password">
+        <label for="confirm-password">Confirm Password</label>
+        <input class="in" type="password" id="confirm-password" oninput="this.setCustomValidity('')" />
+      </div>
+    </div>
+      <div class="advanced" id="advanced" style="margin-left: 20px; font-weight: 100;">
+        <div class="labeled-input">
+          <label for="iv">ʀᴀɴᴅᴏᴍ ᴠᴇᴄᴛᴏʀ</label>
+          <input type="checkbox" id="iv" onclick="onIvCheck(this)" checked />
+        </div>
+        <div class="labeled-input">
+          <label for="salt">ʀᴀɴᴅᴏᴍ sᴀʟᴛ</label>
+          <input type="checkbox" id="salt" checked />
+        </div>
+      </div>
+    <button id="encrypt" onclick="onEncrypt()">ENCRYPT</button>
+  </div></br></br>
+<hr> </hr></br></br>
+  <!-- Output area -->
+  <div class="output">
+    <label for="output">Output</label>
+    <input class="in" type="text" id="output" readonly/>
+    <button id="copy" onclick="onCopy('output')">COPY</button>
+    <p class="alert">ㅤ</p>
+  </div>
+</div>
+</body>
+</html>

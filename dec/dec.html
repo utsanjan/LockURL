@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Utsanjan" />
+  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+  <title>Decrypt Link Lock URLs</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript" src="dec.js"> </script>
+</head>
+
+<body onload="main()">
+  <!-- Display errors in a big red box -->
+  <div class="error red-border" style="display: none">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Try again</button>
+    <a href="https://lockurl.ml/"><button>Lock a link</button></a>
+  </div>
+  <div class="container">
+  <div class="form">
+    <label for="encrypted-url">Locked URL</label>
+    <input class="in" type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+    <label for="password">Password</label>
+    <input class="in" type="password" id="password" />
+    <button onclick="onDecrypt()">DECRYPT</button>
+    <p class="alert">ㅤ</p>
+  </div>
+  <hr> </hr></br></br>
+  <!-- Output area -->
+  <div class="output">
+    <label for="output">Output</label>
+    <input class="in" type="text" id="output" readonly/>
+    <button id="copy" onclick="onCopy('output')">COPY</button>
+    <p class="alert" id="copy-alert">ㅤ</p>
+  </div>
+</div>
+</body>
+</body>
+</html>
