@@ -1,98 +1,104 @@
 function error(text) {
-    document.querySelector(".error").style.display = "inherit";
-    document.querySelector("#errortext").innerText = `Error: ${text}`;
+  const alert = document.querySelector(".alert");
+  alert.innerText = text;
+  alert.style.opacity = 1;
+}
+
+function onBruteForce() {
+  if (!("importKey" in window.crypto.subtle)) {
+    error("window.crypto not loaded. Please reload over https");
+    return;
   }
-  
-  // Run when the <body> loads
-  async function main() {
-    if (window.location.hash) {
-      // Fail if the b64 library or API was not loaded
-      if (!("b64" in window)) {
-        error("Base64 library not loaded.");
-        return;
-      }
-      if (!("apiVersions" in window)) {
-        error("API library not loaded.");
-        return;
-      }
-  
-      // Try to get page data from the URL if possible
-      const hash = window.location.hash.slice(1);
-      let params;
+  if (!("b64" in window && "apiVersions" in window)) {
+    error("Important libraries not loaded!");
+    return;
+  }
+
+  const urlText = document.querySelector("#encrypted-url").value;
+  let url;
+  try {
+    url = new URL(urlText);
+  } catch {
+    error("Invalid URL!");
+    return;
+  }
+
+  let params;
+  try {
+    params = JSON.parse(b64.decode(url.hash.slice(1)));
+  } catch {
+    error("The link appears corrupted.");
+    return;
+  }
+
+  if (!("v" in params && "e" in params)) {
+    error("The link appears corrupted. The encoded URL is missing necessary parameters.");
+    return;
+  }
+
+  if (!(params["v"] in apiVersions)) {
+    error("Unsupported API version. The link may be corrupted.");
+    return;
+  }
+
+  const api = apiVersions[params["v"]];
+
+  const encrypted = b64.base64ToBinary(params["e"]);
+  const salt = "s" in params ? b64.base64ToBinary(params["s"]) : null;
+  const iv = "i" in params ? b64.base64ToBinary(params["i"]) : null;
+
+  const cset = document.querySelector("#charset").value.split("");
+  if (charset == "") {
+    error("Charset cannot be empty.");
+    return;
+  }
+
+  var progress = {
+    tried: 0,
+    total: 0,
+    len: 0,
+    overallTotal: 0,
+    done: false,
+    startTime: performance.now()
+  };
+
+  async function tryAllLen(prefix, len, curLen) {
+    if (progress.done) return;
+    if (len == curLen) {
+      progress.tried++;
       try {
-        params = JSON.parse(b64.decode(hash));
-      } catch {
-        error("The link appears corrupted.");
-        return;
-      }
-  
-      // Check that all required parameters encoded in the URL are present
-      if (!("v" in params && "e" in params)) {
-        error("The link appears corrupted. The encoded URL is missing necessary parameters.");
-        return;
-      }
-  
-      // Check that the version in the parameters is valid
-      if (!(params["v"] in apiVersions)) {
-        error("Unsupported API version. The link may be corrupted.");
-        return;
-      }
-  
-      const api = apiVersions[params["v"]];
-  
-      // Get values for decryption
-      const encrypted = b64.base64ToBinary(params["e"]);
-      const salt = "s" in params ? b64.base64ToBinary(params["s"]) : null;
-      const iv = "i" in params ? b64.base64ToBinary(params["i"]) : null;
-  
-      let hint, password;
-      if ("h" in params) {
-        hint = params["h"];
-        password = prompt(`Please enter the password to unlock the link.\n\nHint: ${hint}`);
-      } else {
-        password = prompt("Please enter the password to unlock the link.");
-      }
-  
-      // Decrypt and redirect if possible
-      let url;
-      try {
-        url = await api.decrypt(encrypted, password, salt, iv);
-      } catch {
-        // Password is incorrect.
-        error("Password is incorrect.");
-  
-        // Set the "decrypt without redirect" URL appropriately
-        document.querySelector("#no-redirect").href =
-          `https://lockurl.ml/decrypt/#${hash}`;
-  
-        // Set the "create hidden bookmark" URL appropriately
-        document.querySelector("#hidden").href =
-          `https://lockurl.ml/hidden/#${hash}`;
-        return;
-      }
-  
-      try {
-        // Extra check to make sure the URL is valid. Probably shouldn't fail.
-        let urlObj = new URL(url);
-  
-        // Prevent XSS by making sure only HTTP URLs are used. Also allow magnet
-        // links for password-protected torrents.
-        if (!(urlObj.protocol == "http:"
-              || urlObj.protocol == "https:"
-              || urlObj.protocol == "magnet:")) {
-          error(`The link uses a non-hypertext protocol, which is not allowed. `
-              + `The URL begins with "${urlObj.protocol}" and may be malicious.`);
-          return;
-        }
-        window.location.href = url;
-      } catch {
-        error("A corrupted URL was encrypted. Cannot redirect.");
-        console.log(url);
-        return;
-      }
-    } else {
-      // Otherwise redirect to the creator
-    window.location.replace("https://bit.ly/3BFw9ph");
+        await api.decrypt(encrypted, prefix, salt, iv);
+        document.querySelector("#output").value = prefix;
+        progress.done = true;
+        error("Completed!");
+      } catch {}
+      return;
+    }
+    for (let i=0; i < cset.length; i++) {
+      let c = cset[i];
+      await tryAllLen(prefix + c, len, curLen + 1);
     }
   }
-  
+
+  function progressUpdate() {
+    if (progress.done) {
+      clearInterval();
+      return;
+    }
+    let delta = performance.now() - progress.startTime;
+    error(`Trying ${progress.total} passwords of length ${progress.len} – ${Math.round(100000 * progress.tried / progress.total)/1000}% complete. Testing ${Math.round(1000000 * (progress.overallTotal + progress.tried) / delta)/1000} passwords per second.`);
+  }
+
+  (async () => {
+    for (let len=0; !progress.done; len++) {
+      progress.overallTotal += progress.tried;
+      progress.tried = 0;
+      progress.total = Math.pow(cset.length, len);
+      progress.len = len;
+      progressUpdate();
+      await tryAllLen("", len, 0);
+    }
+  })();
+
+  setInterval(progressUpdate, 4000);
+}

@@ -1,32 +1,39 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-
+<!DOCTYPE html">
 <head>
   <!-- Metadata -->
   <meta charset="utf-8" />
   <meta name="author" content="Utsanjan" />
-  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="description" content="Brute force password-protected links created with Link Lock from within the browser." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <title>LockURL</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+
+  <title>Brute Force Link Lock</title>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css" type="text/css" />
+  <link rel="stylesheet" href="../style.css" type="text/css" />
 
   <!-- Scripts -->
-  <script type="text/javascript" src="b64.js"></script>
-  <script type="text/javascript" src="api.js"></script>
-  <script type="text/javascript" src="index.js"> </script>
+  <script type="text/javascript" src="../b64.js"></script>
+  <script type="text/javascript" src="../api.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </head>
 
-<body style="width: 100%; height: 100%; padding: auto; background-color: #F2F3F7;" onload="main()">
-  <!-- Display errors in a big red box -->
-  <div class="error" style="display: none">
-    <img width="90px" style="margin-top:-15px;" src="./home/img/error.png">
-    <p id="errortext">Error</p></br>
-    <button style="margin-right: 5px;" onclick="location.href='/home'">Homepage</button>
-    <button style="margin-left: 5px;" onclick="main()">Try again</button>
+<body class="brute error">
+  <div>
+    <label for="charset">Charset</label>
+    <input class="in" type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+    <label for="encrypted-url">Locked URL</label>
+    <input class="in" type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+    <button onclick="onBruteForce()">Brute Force</button>
+    <p class="alert">ㅤ</p>
+  </div>
+  <hr/>
+  </br>
+  <!-- Output area -->
+  <div class="output">
+    <label for="output">Brute Forced Password</label>
+    <input class="in" type="text" id="output" />
   </div>
 </body>
 </html>

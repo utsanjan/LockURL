@@ -1,5 +1,4 @@
 "use strict";
-
 document.addEventListener("DOMContentLoaded", function () {
     /* =====================================
 		TESTIMONIALS SLIDER

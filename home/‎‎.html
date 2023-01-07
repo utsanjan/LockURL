@@ -15,14 +15,22 @@
     <link rel="stylesheet" href="css/device-mockups.css">
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript">
+    function resizeForm(){
+    var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
+    if(width > 1024){document.getElementById("social-menu").checked = true;} 
+    else {document.getElementById("social-menu").checked = false;}    
+    }window.onresize = resizeForm;
+    resizeForm();
+    </script>
   </head>
-  <body onload="myFunction()">
+  <body onload="resizeForm()">
   <header class="header">
   <nav class="fixed-top" id="navbar">
     <div class="float">
       <a class="navbar-brand"></a>
         <div id="menuToggle">
-          <input type="checkbox"/>
+          <input type="checkbox" id="social-menu"/>
           <span></span>
           <span></span>
           <span></span>
