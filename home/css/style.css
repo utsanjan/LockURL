@@ -3,6 +3,10 @@ padding: 0;
 margin: 0;
 }
 
+iframe {
+	background-color: #fff;
+}
+
 body html {
 	width: 100%;
 	height: 100%;
