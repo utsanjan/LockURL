@@ -1,4 +1,20 @@
 "use strict";
+
+function resizeForm(){
+    var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
+    if(width > 1024){document.getElementById("social-menu").checked = true;
+    document.getElementById("social-menu").style.display = "none";
+    document.getElementById("ham1").style.display = "none";
+    document.getElementById("ham2").style.display = "none";
+    document.getElementById("ham3").style.display = "none"} 
+    else {document.getElementById("social-menu").checked = false;
+    document.getElementById("social-menu").style.display = "block";
+    document.getElementById("ham1").style.display = "block";
+    document.getElementById("ham2").style.display = "block";
+    document.getElementById("ham3").style.display = "block"}    
+    }window.onresize = resizeForm;
+    resizeForm();
+    
 document.addEventListener("DOMContentLoaded", function () {
     /* =====================================
 		TESTIMONIALS SLIDER

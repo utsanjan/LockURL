@@ -11,26 +11,11 @@
     <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
     <link rel="stylesheet" href="vendor/modal-video/css/modal-video.min.css">
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="js/front.js"></script>
     <link rel="canonical" href="https://lockurl.ml/home/">
     <link rel="stylesheet" href="css/device-mockups.css">
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/custom.css">
-    <script type="text/javascript">
-    function resizeForm(){
-    var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
-    if(width > 1024){document.getElementById("social-menu").checked = true;
-    document.getElementById("social-menu").style.display = "none";
-    document.getElementById("ham1").style.display = "none";
-    document.getElementById("ham2").style.display = "none";
-    document.getElementById("ham3").style.display = "none"} 
-    else {document.getElementById("social-menu").checked = false;
-    document.getElementById("social-menu").style.display = "block";
-    document.getElementById("ham1").style.display = "block";
-    document.getElementById("ham2").style.display = "block";
-    document.getElementById("ham3").style.display = "block"}    
-    }window.onresize = resizeForm;
-    resizeForm();
-    </script>
   </head>
   <body onload="resizeForm()">
   <header class="header">
@@ -77,7 +62,6 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/modal-video/js/modal-video.js"></script>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="js/front.js"></script>
     <script>
       function injectSvgSprite(path) {
           var ajax = new XMLHttpRequest();
