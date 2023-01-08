@@ -7,7 +7,8 @@
 [![](https://img.shields.io/github/languages/count/utsanjan/LockURL?style=flat)](https://github.com/utsanjan/LockURL/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/LockURL?color=light%20green&style=flat)](https://github.com/utsanjan/LockURL)‎ ‎ <br>
 
-LockURL is an utility for encrypting and decrypting URLs. An encrypted URL will prompt the user for a password when they visit it. LockURL gets the original URL and routes users there if the password is valid. If not, an error message is shown. Additionally, users can add hints to show next to the password prompt. Each encrypted URL is totally contained within the link that the programme creates. Users therefore have complete control over the data they generate via LockURL. Nothing is ever kept on the server.
+LockURL is a utility for encrypting and decrypting URLs. An encrypted URL will prompt the user for a password when they visit it. LockURL gets the original URL and routes users there if the password is valid. If not, an error message is shown. Additionally, users can add hints to show next to the password prompt. Each encrypted URL is contained within the link that the program creates. Users, therefore, have complete control over the data they generate via LockURL. Nothing is ever kept on the server.
+#### [✅ Click here to see working example of a LockURL link.](https://lockurl.ml/#eyJ2IjoiMC4wLjEiLCJlIjoiSGZlcHBodFJvZjgrYm55ZlR6Qkx4RlJWMEdvdXUxRWxIUHFweStNaWg2RTVKU2F1YjQweDhRPT0iLCJoIjoiMSsxPT8g8J+YgyIsInMiOiIrSHNnd3FsSUZHMVk0c2lrcmY2TjVRPT0iLCJpIjoiU2h5RzNUdjJsdmljaWNKRyJ9)
 
 ## 🛠️ Usage Guide
 - Create a password protected link from [here](https://lockurl.ml/).
