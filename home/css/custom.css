@@ -262,7 +262,7 @@
 }
 
 .mo-btn {
-  background-color: #4B505E;
+  background-color: #1BC670;
   padding: 10px 1000px 10px 20px;
   color: white;
   width: auto;
@@ -279,6 +279,6 @@
 
 .mo-btn:hover {
   transition: .5s;
-  border: 5px solid #80879f;
+  border: 5px solid #a5ddc1;
   margin-left: -20px;
 }
