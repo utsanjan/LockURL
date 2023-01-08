@@ -3,17 +3,17 @@
 function resizeForm(){
     var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
     if(width > 1024){document.getElementById("social-menu").checked = true;
-    document.getElementById("social-menu").style.display = "none";
+    document.getElementById("social-menu").style.visibility = "hidden";
     document.getElementById("menu").style.marginTop = "-70px";
-    document.getElementById("ham1").style.display = "none";
-    document.getElementById("ham2").style.display = "none";
-    document.getElementById("ham3").style.display = "none"} 
+    document.getElementById("ham1").style.visibility = "hidden";
+    document.getElementById("ham2").style.visibility = "hidden";
+    document.getElementById("ham3").style.visibility = "hidden"} 
     else {document.getElementById("social-menu").checked = false;
-    document.getElementById("social-menu").style.display = "block";
+    document.getElementById("social-menu").style.visibility = "visible";
     document.getElementById("menu").style.marginTop = "-100px";
-    document.getElementById("ham1").style.display = "block";
-    document.getElementById("ham2").style.display = "block";
-    document.getElementById("ham3").style.display = "block"}    
+    document.getElementById("ham1").style.visibility = "visible";
+    document.getElementById("ham2").style.visibility = "visible";
+    document.getElementById("ham3").style.visibility = "visible"}    
     }window.onresize = resizeForm;
     resizeForm();
     
