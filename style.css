@@ -63,6 +63,7 @@ body {
   max-width: 400px;
   height: auto;
   margin-left: 50%;
+  margin-top: 8%;
   transform: translateX(-50%);
 }
 
