@@ -16,7 +16,7 @@ LockURL is a utility for encrypting and decrypting URLs. An encrypted URL will p
 - By default, the initialization vector and salt are randomized for security, but this can be disabled, even though doing so is a vulnerability.
 - If you lose the password, it is almost impossible to recover the original link. The strong security guaranteed by encryption can be a blessing or a curse if you are not careful!
 - Currently, the only way to recover a lost password is by trying all possible options very slowly by brute force. An example application to brute force LockURL links in the browser can be found [here](https://lockurl.ml/bruteforce/).
-- If you receive a LockURL link that you do not trust, decrypt it using the Decrypt option given on the homepage.
+- If you receive a LockURL link that you don't trust, decrypt it using the option given in the homepage.
 
 ## 📞 Contacts
 For Queries: [My Instagram Profile](https://www.instagram.com/utsanjan/)  
