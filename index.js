@@ -63,11 +63,11 @@ async function main() {
 
       // Set the "decrypt without redirect" URL appropriately
       document.querySelector("#no-redirect").href =
-        `https://lockurl.ml/decrypt/#${hash}`;
+        `https://lockurl.netlify.app/decrypt/#${hash}`;
 
       // Set the "create hidden bookmark" URL appropriately
       document.querySelector("#hidden").href =
-        `https://lockurl.ml/hidden/#${hash}`;
+        `https://lockurl.netlify.app/hidden/#${hash}`;
       return;
     }
 
