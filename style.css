@@ -39,14 +39,13 @@ body {
 }
 
 .error {
-  margin: auto;
   max-width: 400px;
   height: 300px;
   padding: 50px;
-  margin-top: 10%;
   background: white;
   border-radius: 20px;
   box-sizing: border-box;
+  margin: 10% 5px auto 5px;
   box-shadow: -6px -6px 25px rgba(218, 218, 218, 0.7),
               -6px -6px 25px rgba(255, 255, 255, .5),
               6px 6px 25px rgba(255, 255, 255, .075),
