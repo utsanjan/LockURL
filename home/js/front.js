@@ -2,7 +2,7 @@
 
 function resizeForm(){
     var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
-    if(width > 1024){document.getElementById("social-menu").checked = true;
+    if (width > 1024) {document.getElementById("social-menu").checked = true;
     document.getElementById("social-menu").style.visibility = "hidden";
     document.getElementById("ham1").style.visibility = "hidden";
     document.getElementById("ham2").style.visibility = "hidden";
@@ -12,8 +12,7 @@ function resizeForm(){
     document.getElementById("ham1").style.visibility = "visible";
     document.getElementById("ham2").style.visibility = "visible";
     document.getElementById("ham3").style.visibility = "visible"}
-    
-    if(window.self !== window.top) {console.log("Granted");}
+    if (window.self !== window.top) {console.log();}
     else {window.location.href="https://lockurl.netlify.app";}
     }window.onresize = resizeForm;
     resizeForm();
