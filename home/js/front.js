@@ -2,6 +2,8 @@
 
 function resizeForm(){
     var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
+    if(window.self !== window.top) {console.log("Granted");}
+    else {window.location.href="https://lockurl.netlify.app";}
     if(width > 1024){document.getElementById("social-menu").checked = true;
     document.getElementById("social-menu").style.visibility = "hidden";
     document.getElementById("ham1").style.visibility = "hidden";
@@ -80,13 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
         target: "#navbar",
     });
 });
-
-function iniFrame() {
-    if(window.self !== window.top) {
-        break;
-    }
-    else {
-        window.location.href = "https://lockurl.netlify.app";
-    }
-}
-iniFrame();
