@@ -11,7 +11,7 @@ function resizeForm(){
     document.getElementById("social-menu").style.visibility = "visible";
     document.getElementById("ham1").style.visibility = "visible";
     document.getElementById("ham2").style.visibility = "visible";
-    document.getElementById("ham3").style.visibility = "visible"}   
+    document.getElementById("ham3").style.visibility = "visible"}    
     }window.onresize = resizeForm;
     resizeForm();
     
@@ -33,15 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		VIDEO MODAL
 	======================================== */
     new ModalVideo(".js-modal-btn");
-    function iniFrame() {
-        if(window.self !== window.top) {
-            break;
-        }
-        else {
-            window.location.href = "https://lockurl.netlify.app";
-        }
-    }
-    iniFrame();
 
     /* =====================================
 		NAVBAR BEHAVIOR
