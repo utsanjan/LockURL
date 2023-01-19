@@ -12,7 +12,8 @@ function resizeForm(){
     document.getElementById("ham1").style.visibility = "visible";
     document.getElementById("ham2").style.visibility = "visible";
     document.getElementById("ham3").style.visibility = "visible"}
-    if (window.self !== window.top) {console.log();}
+    if (window.self !== window.top)
+    {document.getElementById("page").style.visibility = "visible"}
     else {window.location.href="https://lockurl.netlify.app";}
     }window.onresize = resizeForm;
     resizeForm();

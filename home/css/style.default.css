@@ -216,6 +216,10 @@ body .footer .content>div>div>* {
   margin-right: 0.5rem;
 }
 
+#page {
+  display:none;
+}
+
 body .footer .content>div .image {
   align-self: center;
   width: 4rem;
