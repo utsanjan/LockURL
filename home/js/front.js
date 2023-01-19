@@ -11,10 +11,7 @@ function resizeForm(){
     document.getElementById("social-menu").style.visibility = "visible";
     document.getElementById("ham1").style.visibility = "visible";
     document.getElementById("ham2").style.visibility = "visible";
-    document.getElementById("ham3").style.visibility = "visible"}
-    
-    if(window.self !== window.top) {console.log("Granted");}
-    else {window.location.href="https://lockurl.netlify.app";}
+    document.getElementById("ham3").style.visibility = "visible"}   
     }window.onresize = resizeForm;
     resizeForm();
     
