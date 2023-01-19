@@ -214,10 +214,7 @@ body .footer .content>div>div {
 
 body .footer .content>div>div>* {
   margin-right: 0.5rem;
-}
-
-#page {
-  display:none;
+  }#page {visibility: hidden;
 }
 
 body .footer .content>div .image {
