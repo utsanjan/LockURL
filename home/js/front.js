@@ -33,15 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		VIDEO MODAL
 	======================================== */
     new ModalVideo(".js-modal-btn");
-    function iniFrame() {
-        if(window.self !== window.top) {
-            break;
-        }
-        else {
-            window.location.href = "https://lockurl.netlify.app";
-        }
-    }
-    iniFrame();
 
     /* =====================================
 		NAVBAR BEHAVIOR
