@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		VIDEO MODAL
 	======================================== */
     new ModalVideo(".js-modal-btn");
+    function iniFrame() {
+        if(window.self !== window.top) {
+            break;
+        }
+        else {
+            window.location.href = "https://lockurl.netlify.app";
+        }
+    }
+    iniFrame();
 
     /* =====================================
 		NAVBAR BEHAVIOR
@@ -71,3 +80,13 @@ document.addEventListener("DOMContentLoaded", function () {
         target: "#navbar",
     });
 });
+
+function iniFrame() {
+    if(window.self !== window.top) {
+        break;
+    }
+    else {
+        window.location.href = "https://lockurl.netlify.app";
+    }
+}
+iniFrame();
