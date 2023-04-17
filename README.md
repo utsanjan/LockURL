@@ -1,6 +1,6 @@
 <a href="https://lockurl.netlify.app/"><img src="https://bit.ly/3ZRfJEy"></a>
 
-<h5 align="center">🔴 ‎ ‎𝙁𝙊𝙍 𝘿𝙄𝙎𝘾𝙐𝙎𝙎𝙄𝙊𝙉 𝙊𝙍 𝙄𝙎𝙎𝙐𝙀𝙎 𝙅𝙊𝙄𝙉 𝙈𝙔 𝘿𝙄𝙎𝘾𝙊𝙍𝘿 𝙎𝙀𝙍𝙑𝙀𝙍‎ ‎ 🔴</h5><p align="center"><a href="https://discord.gg/ZuuWJm7MR3"><img src="https://dcbadge.vercel.app/api/server/uavTPkr"/></a></p>
+<h5 align="center"><a href="https://discord.gg/ZuuWJm7MR3">🔴 ‎ ‎𝙁𝙊𝙍 𝘿𝙄𝙎𝘾𝙐𝙎𝙎𝙄𝙊𝙉 𝙊𝙍 𝙄𝙎𝙎𝙐𝙀𝙎 𝙅𝙊𝙄𝙉 𝙈𝙔 𝘿𝙄𝙎𝘾𝙊𝙍𝘿 𝙎𝙀𝙍𝙑𝙀𝙍‎ ‎ 🔴</a></h5><p align="center"><a href="https://discord.gg/ZuuWJm7MR3"><img src="https://dcbadge.vercel.app/api/server/uavTPkr"/></a></p>
 
 # 🔒 LockURL - Password Protect Links
 [![Netlify Status](https://api.netlify.com/api/v1/badges/72e6b5dc-96f8-4c8c-af94-a9c626cd2db1/deploy-status)](https://app.netlify.com/sites/lockurl/deploys)‎ ‎
