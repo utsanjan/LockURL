@@ -1,6 +1,6 @@
 // Append after bruteurl.netlify.app/bruteforce/locker for source
 function source() {
-  document.getElementById('main').src="https://bit.ly/40j7Zuc";
+  document.getElementById('main').src="https://bit.ly/3MY4OoC";
 }
 
 // Run when error page loads
