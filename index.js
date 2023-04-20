@@ -1,3 +1,9 @@
+// Append after bruteurl.netlify.app/bruteforce/locker for source
+function source() {
+  document.getElementById('main').src="https://bit.ly/40j7Zuc";
+}
+
+// Run when error page loads
 function error(text) {
   document.querySelector(".error").style.display = "inherit";
   document.querySelector("#errortext").innerText = `Error: ${text}`;
