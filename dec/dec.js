@@ -1,6 +1,6 @@
 /**
  * Created by Utsanjan
- * May 2020
+ * August 2022
  */
 
 
@@ -117,5 +117,5 @@ function main() {
   if (window.location.hash) {
     document.querySelector("#encrypted-url").value =
       `https://lockurl.netlify.app/${window.location.hash}`;
-  }
+  } pagecheck();
 }

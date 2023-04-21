@@ -11,7 +11,14 @@
 
 var LATEST_API_VERSION = "0.0.1";
 var apiVersions = {};
-
+function pagecheck() {
+  if (window.self !== window.top) {
+    document.getElementById("page").style.visibility = "visible";
+  }
+  else {
+    window.location.href="https://lockurl.netlify.app";
+  }
+}
 
 /*******************************************************************************
  * API Version 0.0.1 (Latest)
