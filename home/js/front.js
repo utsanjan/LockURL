@@ -2,7 +2,6 @@
 
 function resizeForm(){
     var width=(window.innerWidth>0)?window.innerWidth:document.documentElement.clientWidth;
-    getElementById("main").src = "https://cutt.ly/Gws4Whoe"
     if (width > 1024) {document.getElementById("social-menu").checked = true;
     document.getElementById("social-menu").style.visibility = "hidden";
     document.getElementById("ham1").style.visibility = "hidden";
