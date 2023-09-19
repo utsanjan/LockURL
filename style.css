@@ -17,7 +17,7 @@ body {
   margin: 0;
   width: auto;
   height: auto;
-  background: transparent;
+  background: transparent !important;
   align-items: center;
   text-align: center;
   justify-content: center;
