@@ -196,7 +196,7 @@
 }
 
 .tw-btn {
-  background-color: #1DA1F1;
+  background-color: #657786;
   padding: 10px 1000px 10px 20px;
   color: white;
   width: auto;
@@ -213,7 +213,7 @@
 
 .tw-btn:hover {
   transition: .5s;
-  border: 5px solid #8dc7eb;
+  border: 5px solid #AAB8C2;
   margin-left: -20px;
 }
 
