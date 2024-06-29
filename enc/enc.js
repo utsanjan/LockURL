@@ -118,7 +118,7 @@ async function onEncrypt() {
   const useRandomSalt = document.querySelector("#salt").checked;
   const hint = document.querySelector("#hint").value
   const encrypted = await generateFragment(url, password, hint, useRandomSalt, useRandomIv);
-  const output = `https://lockurl.netlify.app/#${encrypted}`;
+  const output = `https://lockurl.dopesatan.in/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");

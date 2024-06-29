@@ -14,7 +14,7 @@ function resizeForm(){
     document.getElementById("ham3").style.visibility = "visible"}
     if (window.self !== window.top)
     {document.getElementById("page").style.visibility = "visible"}
-    else {window.location.href="https://lockurl.netlify.app";}
+    else {window.location.href="https://lockurl.dopesatan.in";}
     }window.onresize = resizeForm;
     resizeForm();
     
