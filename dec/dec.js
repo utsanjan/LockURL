@@ -116,6 +116,6 @@ function onCopy(id) {
 function main() {
   if (window.location.hash) {
     document.querySelector("#encrypted-url").value =
-      `https://lockurl.dopesatan.in/${window.location.hash}`;
+      `https://lockurl.netlify.app/${window.location.hash}`;
   } pagecheck();
 }

@@ -16,7 +16,7 @@ function pagecheck() {
     document.getElementById("page").style.visibility = "visible";
   }
   else {
-    window.location.href="https://lockurl.dopesatan.in";
+    window.location.href="https://lockurl.netlify.app";
   }
 }
 
