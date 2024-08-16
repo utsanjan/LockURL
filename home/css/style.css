@@ -33,11 +33,11 @@ html, body {width: 100% !important; height: 100% !important;}
 	-moz-box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.3);
 	box-shadow: 0px 0px 36px 5px rgba(0,0,0,0.3);
 	-webkit-transition: all .1s ease-in; 
+	background-color: #fefefe00; 
 	transition: all .1s ease-in; 
 	display: flex; 
 	align-items: center; 
 	justify-content: center; 
-	background-color: #fefefe; 
 	overflow:hidden;
 	bottom: 20px;
 	z-index: 20; 
