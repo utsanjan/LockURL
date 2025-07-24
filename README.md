@@ -3,7 +3,7 @@
 # 🔒 LockURL - Password Protect Links
 [![Netlify Status](https://api.netlify.com/api/v1/badges/72e6b5dc-96f8-4c8c-af94-a9c626cd2db1/deploy-status)](https://app.netlify.com/sites/lockurl/deploys)‎ ‎
 [![Buy Me A Coffee](https://img.shields.io/open-vsx/stars/redhat/java?color=D8B024&label=buy%20me%20a%20coffee&style=flat)](https://www.buymeacoffee.com/utsanjan)‎ ‎
-[![](https://dcbadge.vercel.app/api/server/uavTPkr?style=flat)](https://discord.gg/ZuuWJm7MR3)‎ ‎ 
+[![](https://dcbadge.limes.pink/api/server/uavTPkr?style=flat)](https://discord.gg/ZuuWJm7MR3)‎ ‎ 
 [![](https://img.shields.io/github/license/utsanjan/LockURL?logoColor=red&style=flat)](https://github.com/utsanjan/LockURL/blob/main/LICENSE)‎ ‎
 [![](https://img.shields.io/github/languages/count/utsanjan/LockURL?style=flat)](https://github.com/utsanjan/LockURL/search?l=shell)‎ ‎
 [![](https://img.shields.io/github/languages/top/utsanjan/LockURL?color=light%20green&style=flat)](https://github.com/utsanjan/LockURL)‎ ‎
