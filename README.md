@@ -20,7 +20,7 @@ LockURL is a utility designed for encrypting and decrypting URLs. When a user vi
 - Brute-force recovery tool for lost passwords (use with caution)
 
 ## 🛠️ How to Use
-1. Visit [LockURL](https://lockurl.netlify.app/) to create a password-protected link.
+1. Visit [LockURL](https://lockurl.netlify.app/) to easily create a secure, password-protected link for your content.
 2. Adjust encryption settings, randomize initialization vector & salt for enhanced security.
 3. Share the generated link. Recipients need the correct password to access the original URL.
 4. Losing the password makes recovery nearly impossible. Try the [brute-force tool](https://lockurl.netlify.app/bruteforce/) if needed.
