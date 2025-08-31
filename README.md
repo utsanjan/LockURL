@@ -24,7 +24,7 @@ LockURL is a utility designed for encrypting and decrypting URLs. When a user vi
 2. Adjust encryption settings, randomize initialization vector & salt for enhanced security.
 3. Share the generated link. Recipients need the correct password to access the original URL.
 4. Losing the password makes recovery nearly impossible. Try the [brute-force tool](https://lockurl.netlify.app/bruteforce/) if needed.
-5. Untrusted links? Decrypt safely using the homepage’s provided decrypt option.
+5. If you encounter untrusted links, decrypt safely using the homepage’s decrypt option.
 
 ## ⚠️ Security Notes
 - Randomizing initialization vector and salt is recommended for maximum security.
