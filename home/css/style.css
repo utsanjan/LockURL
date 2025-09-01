@@ -32,8 +32,7 @@ body {
 	bottom: 0;
 	left: 0;
 	max-width: 728px;
-	margin-left: 50%;
-	transform: translateX(-50%);
+	margin-left: 15px;
 	width: 90%;
 	height: 90px;
 	border-radius: 10px;
@@ -48,8 +47,16 @@ body {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	bottom: 20px;
+	bottom: 15px;
 	z-index: 20;
+}
+
+@media (max-width: 992px) {
+	.sticky-ads {
+		margin-left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+	}
 }
 
 .sticky-ads-close {
