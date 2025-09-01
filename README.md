@@ -15,8 +15,8 @@ LockURL is a utility designed for encrypting and decrypting URLs. When a user vi
 ## 🚀 Features
 - Encrypt URLs with a password for secure access
 - Add optional hints to guide users
-- Fully client-side: no data stored on servers
 - Customizable encryption settings
+- Fully client-side: no data stored on servers
 - Brute-force recovery tool for lost passwords (use with caution)
 
 ## 🛠️ How to Use
