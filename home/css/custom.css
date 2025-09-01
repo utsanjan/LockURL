@@ -148,6 +148,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -155,7 +157,6 @@ a:hover {
 }
 
 .fb-btn:hover {
-	transition: .5s;
 	border: 5px solid #8599c2;
 	margin-left: -20px;
 }
@@ -170,6 +171,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -177,7 +180,6 @@ a:hover {
 }
 
 .ig-btn:hover {
-	transition: .5s;
 	border: 5px solid #dca2b8;
 	margin-left: -20px;
 }
@@ -192,6 +194,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -199,7 +203,6 @@ a:hover {
 }
 
 .tw-btn:hover {
-	transition: .5s;
 	border: 5px solid #AAB8C2;
 	margin-left: -20px;
 }
@@ -214,6 +217,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -221,7 +226,6 @@ a:hover {
 }
 
 .dn-btn:hover {
-	transition: .5s;
 	border: 5px solid #feea85;
 	margin-left: -20px;
 }
@@ -236,6 +240,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -243,7 +249,6 @@ a:hover {
 }
 
 .yt-btn:hover {
-	transition: .5s;
 	border: 5px solid #de7474;
 	margin-left: -20px;
 }
@@ -258,6 +263,8 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
+	border: 5px solid transparent;
+	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
 		6px 6px 20px rgba(255, 255, 255, 0.859),
@@ -265,7 +272,6 @@ a:hover {
 }
 
 .mo-btn:hover {
-	transition: .5s;
 	border: 5px solid #a5ddc1;
 	margin-left: -20px;
 }
