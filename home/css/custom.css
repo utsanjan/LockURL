@@ -148,7 +148,7 @@ a:hover {
 	border-radius: 15px;
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
-	border: 5px solid transparent;
+	border: 0px solid transparent;
 	transition: all .5s ease;
 	box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.859),
 		-6px -6px 20px rgba(255, 255, 255, 0.859),
