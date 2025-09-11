@@ -27,7 +27,7 @@ LockURL is a utility designed for encrypting and decrypting URLs. When a user vi
 5. If you encounter untrusted links, decrypt safely using the homepage’s decrypt option.
 
 ## ⚠️ Security Notes
-- Randomizing initialization vector and salt is recommended for maximum security.
+- Randomizing the initialization vector and salt is recommended for maximum security.
 - Brute-forcing is slow and not guaranteed to recover lost passwords.
 - Disabling randomization may create vulnerabilities.
 
